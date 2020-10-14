@@ -53,28 +53,29 @@ This file also specifies a number of parameters that define the procedure of the
 
 ## How to create a URL for the experiment
 
-For a test run of the experiment locally, one can run the following: `python -m SimpleHTTPServer`
+For a test run of the experiment locally, one can run the following: `python -m SimpleHTTPServer`, and use the following URL:
 
-To launch the experiment on the internet, use the following URL:
 + For the full experiment: http://0.0.0.0:8000/exp1_2AFC.html?condition=experimental&speaker=M15&order=1&visual=2&block=2
-+ For a brief version (limited number of items in each block): http://0.0.0.0:8000/exp1_2AFC.html?condition=testRun&TrL=A&TeL=0
-*Test model*: add `&mode=test` to the end of the URL to skip the initial section (Instructions, Consent form, Headphone adjustment, etc.)
++ For a brief version (limited number of items in each block): http://0.0.0.0:8000/exp1_2AFC.html?condition=testRun&TeL=0
+*Test mode*: add `&mode=test` to the end of the URL to skip the initial section (Instructions, Consent form, Headphone adjustment, etc.)
+
+To launch the experiment on the internet, use the following URL (the URL parameters should be specified):
+https://www.hlp.rochester.edu/mturk/xxie/io_perception/exp1_2AFC.html?condition={condition}&speaker={speaker}&order={order}&visual={visual}&block={block}
 
 **URL parameters**
 The URL takes a few parameters that are defined in the experiment js file. 
-  +  `condition` // Which condition: experimental or control 
-  +  `speaker` // Which speaker is used at test phase: M4 or M15
+
++ For the full experiment: 
+  +  `condition`:  {'experimental', 'control'} // Which condition is used
+  +  `speaker`: {'M4', 'M15'} // Which speaker is used at test phase
+For each Condition X Speaker combination, there are 8 lists (2 list item order X 2 test block order X 2 visual orders)
+  +  `order` // Which of two reversed orders of items within a list
+  +  `visual` //Which of two orders for visual stimuli presentation (whether the target word appears left or right on the screen)
+  +  `block`: {'1', '2'} // Which block order is used, whether stimuli set 1 appeared in test block 1 or test block 2
   
-For each Condition X Speaker combination, there are 8 lists (2 visual orders X 2 list item order X 2 test block order)
-*visual order -- correct answer presented as left or right on the screen; list item order: the order of items within training and test lists; test block order: for test items, whether set 1 appeared in block 1 or block 2
-
-  +  `block` // which block order (1 or 2)
-  +  `TrL` //which training list (A or B)
-  +  `TeL` //which test list for test block 1 & 2: 1,2,3,4,5,6
-  +  `order` //which of two reversed lists of items within a list
-  +  `visual` //which of two orders for visual stimuli presentation (whether the target word appears as visual1 or visual2)
-
-
++ For a brief version
+  +  `condition`:  {'testRun'} // Which condition is used
+  +  `TeL`: {'0'} // Which lists are used
 
 ## img
 
