@@ -70,7 +70,7 @@ The URL takes a few parameters that are defined in the experiment js file.
   +  `speaker`: {'M4', 'M15'} // Which speaker is used at test phase
 For each Condition X Speaker combination, there are 8 lists (2 list item order X 2 test block order X 2 visual orders)
   +  `order`: {'1', '2'}// Which of two reversed orders of items within a list
-  +  `visual`: {'1', '2'}//Which of two orders for visual stimuli presentation (whether the target word appears left or right on the screen)
+  +  `visual`: {'1', '2'}// Which of two orders for visual stimuli presentation (whether the target word appears left or right on the screen)
   +  `block`: {'1', '2'} // Which block order is used, whether stimuli set 1 appeared in test block 1 or test block 2
   
 + For a brief version
@@ -93,7 +93,7 @@ This folder contains the lists of stimuli, organized by experimental blocks. Fil
 
 This folder contains the audio stimuli used in the main experiment.
 
-## stimuli_soundcheck_
+## stimuli_soundcheck
 
 This folder contains the audio stimuli used in the screening phase. 
 
