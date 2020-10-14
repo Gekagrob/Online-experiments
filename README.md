@@ -37,7 +37,7 @@ This file also specifies a number of parameters that define the procedure of the
 + Experiment setup: `rsrbProtocolNumber`, `consentForm`, `survey` are specified at the top. 
 + URL parameters: these are extracted from the URL (see below)
 + Block parameters
-(most parameters are defined in this file and are self-explanatory; below are some typical parameters that can be varied to create variations of a experimental block; see corresponding block js script for detail):
+(most parameters are defined in this file and are self-explanatory; below are some typical parameters that can be varied to create variations of a experimental block; see corresponding block js scripts located in /js_adapt/ for detail):
 	- `showInTest`: {'false', 'true'} //when url contains 'mode=test', don't include this block
 	- `blockRandomizationMethod`: {'shuffle', 'dont_randomize'} // whether the order of items within this block are randomized or not
 	- `mediaType`: {'audio', 'visual'} // whether the stimuli is audio or visual
